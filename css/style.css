@@ -421,14 +421,17 @@ p:last-child {
   display: block;
   border-radius: 6px;
   padding: 4px 10px;
-  background-color: rgba(255, 255, 255, 0.95);
-  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background-color var(--transition-base), backdrop-filter var(--transition-base);
 }
 
-/* Scrolled (white bg): remove pill bg, use multiply to blend */
+/* Scrolled (white bg): solid white pill, multiply removes image bg */
 .nav--scrolled .nav__logo-img {
   background-color: transparent;
-  padding: 4px 10px;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   mix-blend-mode: multiply;
 }
 
@@ -564,16 +567,15 @@ p:last-child {
 
 .hero__rls-mark {
   display: inline-block;
-  font-family: var(--font-display);
-  font-size: clamp(3.5rem, 8vw, 5.5rem);
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  color: var(--color-near-black);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.12em;
+  color: var(--color-text-light);
   line-height: 1;
-  margin-bottom: var(--space-sm);
-  text-transform: uppercase;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
-  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
 }
 
 .hero__title {
