@@ -1809,6 +1809,13 @@ p:last-child {
     padding-top: calc(var(--nav-height) + var(--space-lg));
   }
 
+  .hero--page {
+    min-height: 240px;
+    padding-top: calc(var(--nav-height) + var(--space-md));
+    padding-bottom: var(--space-lg);
+    background-position: center 30%;
+  }
+
   .hero__title {
     font-size: clamp(2rem, 8vw, 2.75rem);
   }
@@ -1876,6 +1883,10 @@ p:last-child {
 
   .hero__title {
     font-size: 1.875rem;
+  }
+
+  .hero--page {
+    min-height: 200px;
   }
 
   .stat__number {
