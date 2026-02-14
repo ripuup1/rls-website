@@ -1774,6 +1774,10 @@ p:last-child {
     height: 42px;
   }
 
+  .hero__rls-mark {
+    display: none;
+  }
+
   /* Grid adjustments */
   .grid--2,
   .grid--3,
