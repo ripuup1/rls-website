@@ -412,26 +412,29 @@ p:last-child {
   justify-content: center;
   text-decoration: none;
   flex-shrink: 0;
-  border-radius: 6px;
-  padding: 4px 10px;
-  background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: background-color var(--transition-base);
+  padding: 2px 6px;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
+  transition: background-color var(--transition-base), box-shadow var(--transition-base), border-radius var(--transition-base), padding var(--transition-base);
 }
 
 .nav__logo-img {
-  height: 52px;
+  height: 46px;
   width: auto;
   display: block;
-  mix-blend-mode: multiply;
 }
 
-/* Scrolled (white bg): pill fades away, logo blends into white nav */
+/* Scrolled (white bg): pill dissolves, logo sits flush in white nav */
 .nav--scrolled .nav__logo {
   background-color: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.nav--scrolled .nav__logo-img {
+  mix-blend-mode: multiply;
 }
 
 /* --- Nav links --- */
