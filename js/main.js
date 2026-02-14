@@ -27,26 +27,26 @@
      2. MOBILE MENU
      ---------------------------------------- */
   const hamburger = document.querySelector('.nav__hamburger');
-  const navLinks = document.querySelector('.nav__links');
+  const mobileMenu = document.querySelector('.nav__mobile-menu');
   const navOverlay = document.querySelector('.nav-overlay');
 
   function openMenu() {
     hamburger.classList.add('open');
-    navLinks.classList.add('open');
+    mobileMenu.classList.add('open');
     if (navOverlay) navOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
+    mobileMenu.classList.remove('open');
     if (navOverlay) navOverlay.classList.remove('open');
     document.body.style.overflow = '';
   }
 
-  if (hamburger && navLinks) {
+  if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', function () {
-      if (navLinks.classList.contains('open')) {
+      if (mobileMenu.classList.contains('open')) {
         closeMenu();
       } else {
         openMenu();
@@ -54,7 +54,7 @@
     });
 
     // Close menu when clicking a link
-    navLinks.querySelectorAll('.nav__link').forEach(function (link) {
+    mobileMenu.querySelectorAll('.nav__link').forEach(function (link) {
       link.addEventListener('click', closeMenu);
     });
 
@@ -65,7 +65,7 @@
 
     // Close menu on Escape key
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
         closeMenu();
       }
     });
