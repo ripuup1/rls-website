@@ -574,9 +574,11 @@ p:last-child {
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.12em;
-  color: var(--color-near-black);
+  color: var(--color-forest-light);
   line-height: 1;
   margin-bottom: 0.75rem;
+  opacity: 0.95;
+  text-shadow: 0 0 20px rgba(58, 107, 30, 0.35), 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero__title {
